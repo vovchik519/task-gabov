@@ -17,7 +17,6 @@ const useFetch = () => {
 };
 function TaskOne() {
     const result = useFetch();
-    console.log(result)
     return (
         <div>
             {result && result.map((item, index) => (

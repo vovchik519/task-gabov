@@ -9,7 +9,7 @@ function UsersInfo(props) {
                 <p>{props.username}</p>
                 <a href={`tel:${props.phone}`}>{props.phone}</a>
                 <a href={`mailto:${props.email}`}>{props.email}</a>
-                <p>{props.website}</p>
+                <a href={`http://${props.website}`} target='_blank'>{props.website}</a>
             </details>
         </>
     )
