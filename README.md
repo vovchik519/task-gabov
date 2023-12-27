@@ -1,5 +1,13 @@
-Учебный проект на React
-TaskOne - Подключение Api
+## Учебный проект на React
 
-yarn install
-yarn start
+#### Темы
+##### TaskOne - Подключение Api
+
+Установить проект
+`yarn install`
+
+Запустить проект
+`yarn start`
+
+Что бы перейти в приложение
+`http://localhost:3000/`
