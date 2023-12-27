@@ -1,15 +1,15 @@
 import react from 'react';
-import styles from './style.module.scss'
+import styles from './UsersInfo.module.scss'
 
-function UsersInfo(props) {
+function UsersInfo({ name, username, phone, email, website }) {
     return (
         <>
             <details className={styles.wrapper}>
-                <summary>{props.name}</summary>
-                <p>{props.username}</p>
-                <a href={`tel:${props.phone}`}>{props.phone}</a>
-                <a href={`mailto:${props.email}`}>{props.email}</a>
-                <a href={`http://${props.website}`} target='_blank'>{props.website}</a>
+                <summary>{name}</summary>
+                <p>{username}</p>
+                <a href={`tel:${phone}`}>{phone}</a>
+                <a href={`mailto:${email}`}>{email}</a>
+                <a href={`http://${website}`} target='_blank'>{website}</a>
             </details>
         </>
     )

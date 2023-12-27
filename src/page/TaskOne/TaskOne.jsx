@@ -1,5 +1,4 @@
 import react, { useEffect, useState } from 'react';
-import styles from './style.module.scss'
 import UsersInfo from '../../components/UsersInfo/UsersInfo';
 import axios from 'axios';
 
