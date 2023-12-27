@@ -1,3 +1,4 @@
+import react from 'react';
 import TaskOne from './page/TaskOne/TaskOne';
 
 function App() {
