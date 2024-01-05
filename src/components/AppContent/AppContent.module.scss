@@ -1,0 +1,15 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: calc(1140px + clamp(40px, calc(5rem + (40 - 80) * ((100vw - 1140px) / (325 - 1140))), 80px));
+    min-height: 100vh;
+    padding: 0 clamp(20px, calc(2.5rem + (20 - 40) * ((100vw - 1140px) / (325 - 1140))), 40px);
+    main {
+        flex: 1 1 auto;
+    }
+    header,
+    footer {
+        flex: 0 0 auto;
+    }
+}

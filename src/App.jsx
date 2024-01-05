@@ -1,11 +1,13 @@
-import react from 'react';
-import TaskOne from './page/TaskOne/TaskOne';
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import AppContent from 'components/AppContent/AppContent'; 
+import 'assets/styles/global.scss'
 
 function App() {
   return (
-    <div>
-      <TaskOne/>
-    </div>
+    <BrowserRouter>
+      <AppContent/>
+    </BrowserRouter>
   );
 }
 

@@ -17,4 +17,6 @@ TaskOne - `git checkout ec4fbe54407470d98c3fff347ff9f620a8127771`
 `yarn start`
 
 Что бы перейти в приложение
-`http://localhost:3000/`
+`http://localhost:3000`
+или
+`http://localhost:3001`
