@@ -13,6 +13,7 @@ TaskTwo - `git checkout 0baff408f2685527ecfc61adcddee8126deefc45`
 Что бы перейти на последнюю версию приложения, введите команду - `git checkout master`
 Если у вас появились ошибки, то перезапустите `yarn start`
 
+### Настройка приложения
 Установить проект
 `yarn install`
 
