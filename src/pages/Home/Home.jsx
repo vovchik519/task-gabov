@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import styles from './Home.module.scss';
 import routeMain from './routes';
 import Title from 'components/Title/Title';
 import List from 'components/List/List';
-import newsListMocks from 'fixtures/newsListMocks';
+import getNews from 'services/getNews';
 
 const Home = () => {
+    const [newsList, setNewsList] = useState([]);
+    useEffect(() => {
+        getNews().then(response => {
+            setNewsList(response.data.articles)
+        })
+    }, [])
     return (
         <section>
             <Title
@@ -13,7 +20,7 @@ const Home = () => {
                 titleRow='свежие'
                 titleAccent='новости'
             />
-            {newsListMocks.length > 0 && <List list={newsListMocks.slice(0,6)} />}
+            {newsList.length > 0 && <List list={newsList.slice(0, 6)} />}
         </section>
     );
 };

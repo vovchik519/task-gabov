@@ -6,7 +6,7 @@ const List = ({ list }) => {
     return (
         <ul className={styles.list}>
             {list.map((news) => (
-                <Item key={news.id} item={news} />
+                <Item key={news._id} item={news} />
             ))}
         </ul>
     );
