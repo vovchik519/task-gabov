@@ -6,7 +6,7 @@
 ### Переключение по заданиям
 Что бы посмотреть определенный урок вам необходимо переключиться к конкретному коммиту
 
-TaskOne - `git checkout ec4fbe54407470d98c3fff347ff9f620a8127771`
+TaskOne - `git checkout ec4fbe54407470d98c3fff347ff9f620a8127771`  
 TaskTwo - `git checkout 0baff408f2685527ecfc61adcddee8126deefc45`
 
 Что бы перейти на последнюю версию приложения, введите команду - `git checkout master`
