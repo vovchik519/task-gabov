@@ -1,27 +1,32 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import styles from './Home.module.scss';
+import React from 'react';
 import routeMain from './routes';
-import Title from 'components/Title/Title';
-import List from 'components/List/List';
-import getNews from 'services/getNews';
+import ReactDOM from 'react-dom';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import Actions from 'components/Actions/Actions';
 
+const defaultState = {
+    cash: 10,
+}
+
+const reducer = (state = defaultState, action) => {
+    switch (action.type) {
+        case 'ADD__CASH':
+            return {...state, cash: state.cash + action.payload}
+        case 'GET__CASH':
+            return {...state, cash: state.cash - action.payload}
+        default:
+            return state
+    }
+}
+const store = createStore(reducer)
 const Home = () => {
-    const [newsList, setNewsList] = useState([]);
-    useEffect(() => {
-        getNews().then(response => {
-            setNewsList(response.data.articles)
-        })
-    }, [])
     return (
-        <section>
-            <Title
-                title='Всегда'
-                titleRow='свежие'
-                titleAccent='новости'
-            />
-            {newsList.length > 0 && <List list={newsList.slice(0, 6)} />}
-        </section>
+        <div>
+            <Provider store={store}>
+                <Actions />
+            </Provider>
+        </div>
     );
 };
 export { routeMain };

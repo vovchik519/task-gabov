@@ -1,6 +1,0 @@
-.list{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: clamp(24px, calc(3.5625rem + (24 - 57) * ((100vw - 1140px) / (325 - 1140))), 57px) clamp(18px, calc(1.875rem + (18 - 30) * ((100vw - 1140px) / (325 - 1140))), 30px);
-    margin-top: clamp(40px, calc(4.6875rem + (40 - 75) * ((100vw - 1140px) / (325 - 1140))), 75px);
-}
